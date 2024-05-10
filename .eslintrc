@@ -1,0 +1,95 @@
+{
+  "extends": [
+    "@mistjs/eslint-config-vue"
+  ],
+  "rules": {
+    "@typescript-eslint/no-this-alias": [
+      "off"
+    ],
+    "no-cond-assign": ["error", "except-parens"],
+    "curly": "off",
+    "no-console": "off",
+    "quote-props": "off",
+    //    "no-trailing-spaces": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/brace-style": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "vue/html-self-closing": "off",
+    "vue/singleline-html-element-content-newline": "off",
+    "vue/component-tags-order": "off",
+    "vue/space-unary-ops": "off",
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "vue/multi-word-component-names": "off",
+    "vue/v-on-event-hyphenation": "off",
+    "vue/comma-dangle": "off",
+    "vue/quote-props": "off",
+    "vue/custom-event-name-casing": "off",
+    "vue/one-component-per-file": "off",
+    "vue/dot-location": "off",
+    "operator-linebreak": "off",
+    "array-callback-return": "off",
+    "import/no-named-as-default": "off",
+    // indent: ["error", 2],
+    "no-var": "error", // 变量不要用var声明
+    "prefer-const": "error", // 优先使用const声明变量
+    // "no-shadow": ["error", { hoist: "functions" }], // 变量不要与外层作用域已存在的变量同名
+    "no-multi-assign": "error", //禁止连续赋值
+    "no-new-object": "error", // 不要使用new Object声明变量
+    "object-shorthand": "error", // 使用对象属性和方法的简写语法
+    "dot-notation": "error", // 优先使用 . 访问对象的属性
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": false
+      }
+    ], // 使用解构获取对象属性
+    "no-prototype-builtins": "error", // 不要直接在对象上调用 Object.prototypes 上的方法
+    "no-new-func": "error", // 不要用 Function 构造函数创建函数
+    "no-inner-declarations": "error", // 不要在非函数块中使用函数声明
+    "prefer-arrow-callback": "error", //箭头函数代替匿名函数
+    "prefer-rest-params": "error", //箭头函数代替匿名函数
+    "arrow-parens": "error", // 箭头函数编码风格
+    "no-param-reassign": "error", // 不要修改函数参数
+    "require-yield": "error", // generator 函数内必须有 yield 语句
+    // complexity: ["warn", 15], // 函数杂度不超过15
+    "max-params": [
+      "warn",
+      8
+    ], // 函数参数最多不超过8个
+    "no-useless-constructor": "error", // class避免不必要的 constructor
+    "constructor-super": "error", // 正确地使用 super 方法
+    "no-this-before-super": "error", // 正确地使用 super 方法
+    // "no-plusplus": "error", // 不要使用一元自增自减运算符
+    "no-void": "error", // 不要使用 void 运算符
+    "no-nested-ternary": "off", // 避免嵌套的三元表达式
+    "no-new-wrappers": "error", // 不要使用 new Number/String/Boolean
+    "prefer-template": "error", // 使用模板字符串替代字符串拼接
+    "no-useless-escape": "error", // 禁止不必要的转义字符
+    "no-array-constructor": "error", // 使用字面量创建数组
+    "no-extra-boolean-cast": "error", // 避免不必要的布尔类型转换
+    "no-unneeded-ternary": "error", // 避免不必要的三元表达式
+    "no-fallthrough": "error", // switch 语句中的 case 需要以 break 结尾
+    "default-case": "error", // switch 语句需要始终包含 default 分支
+    // "max-depth": ["error", 4], // 控制语句的嵌套层级不要超过4层
+    "no-global-assign": "error", // 禁止对原生对象或只读的全局对象进行赋值
+    "no-eval": "error", // 禁止使用 eval
+    "no-alert": "error", // 禁止使用 alert
+    "no-underscore-dangle": "error", // 命名不要以下划线开头或结尾
+    "camelcase": [
+      "error",
+      {
+        "properties": "never"
+      }
+    ] // 使用小驼峰（camelCase）命名原始类型、对象、函数、实例
+    // "new-cap": "error", // 使用大驼峰（PascalCase）命名类和构造函数。 eslint: [new-cap](https://eslint.org/docs/rules/new-cap)
+    // eqeqeq: "error", //  使用严格相等（===）运算符
+    // "max-lines": ["error", 1000], // 文件最大不要超过 1000 行
+    // "max-lines-per-function": ["error", { max: 80 }], // 函数最大行数：80
+    //    "spaced-comment": ["error", "always", { "markers": ["#region", "#endregion"] }]
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  }
+}

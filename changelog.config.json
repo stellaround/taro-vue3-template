@@ -1,0 +1,13 @@
+{
+  "types": {
+    "feat": {
+      "title": "🚀 Features"
+    },
+    "fix": {
+      "title": "🐞 Bug Fixes"
+    }
+  },
+  "templates": {
+    "commitMessage": "chore: 更新v{{newVersion}}版本的changelog和package文件"
+  }
+}

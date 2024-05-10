@@ -1,0 +1,40 @@
+{
+  // Place your manager 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "vue3 file template": {
+    // 代码片段名称
+    "scope": "vue", // 生效的语言
+    "prefix": "vue3", // 片段缩写
+    "body": [
+      "<template>",
+      "\t<div class=\"${TM_FILENAME_BASE/([A-Z])?\\B([A-Z])/${1:/downcase}-${2:/downcase}/g}\">$2</div>",
+      "</template>",
+			""
+      "<script setup lang='ts'>",
+      "$3",
+      "</script>",
+			""
+      "<style lang=\"less\" scoped>",
+      ".${TM_FILENAME_BASE/([A-Z])?\\B([A-Z])/${1:/downcase}-${2:/downcase}/g} {",
+      "$4",
+      "}",
+      "</style>"
+    ],
+    // 在文件中输入完prefix时候，弹出此内容
+    "description": "vue3文件初始化模板"
+  }
+}

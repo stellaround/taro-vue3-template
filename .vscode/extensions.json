@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "esbenp.prettier-vscode",
+    "Vue.vscode-typescript-vue-plugin",
+    "eamodio.gitlens",
+    "dariofuzinato.vue-peek",
+    "hollowtree.vue-snippets",
+    "SimonSiefke.svg-preview",
+    "MS-CEINTL.vscode-language-pack-zh-hans",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "ant-design-vue.vscode-ant-design-vue-helper",
+    "adam-bender.commit-message-editor",
+    "mhutchie.git-graph"
+  ]
+}
