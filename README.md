@@ -1,7 +1,7 @@
 <div align="center">
   <img alt="taro-vue3-template logo" width="120" height="120" src="./logo.png">
   <h1>taro-vue3-template</h1>
-  <span><a href="README.zh-CN.md">English</a> | 中文</span>
+  <span>English | <a href="README.zh-CN.md">中文</a></span>
 </div>
 
 ## Introduction
