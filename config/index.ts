@@ -125,6 +125,9 @@ const config = {
       exclude: [path.resolve(__dirname, '../src/assets/icons')],
       name: 'static/images/[name].[hash:8].[ext]',
     },
+    miniCssExtractPluginOption: {
+      ignoreOrder: true,
+    },
   },
   h5: {
     webpackChain(chain) {
@@ -133,15 +136,19 @@ const config = {
           rule: {
             // 覆盖 Taro 默认的图片加载配置
             image: {
-              test: /\.(png|jpe?g|gif|bpm|webp)(\?.*)?$/,
-              use: [
-                {
-                  loader: 'url-loader',
-                  options: {
-                    name: path.resolve(__dirname, 'images/[name].[ext]'),
-                  },
+              test: /\.(png|jpe?g|gif|bmp)$/,
+              type: 'asset',
+              parser: {
+                dataUrlCondition: (asset): boolean => {
+                  return asset.size <= 500;
                 },
-              ],
+              },
+              generator: {
+                publicPath: '/',
+                filename() {
+                  return 'static/images/[name][ext]';
+                },
+              },
             },
             // 使用 svg-sprite-loader 的配置
             'svg-loader': {
@@ -190,13 +197,7 @@ const config = {
         }),
       );
     },
-    imageUrlLoaderOption: {
-      limit: 5000,
-      exclude: [path.resolve(__dirname, '../src/assets/icons')],
-      name: 'static/images/[name].[hash:8].[ext]',
-    },
     publicPath: '/',
-    staticDirectory: 'static',
     esnextModules: ['nutui-taro', 'icons-vue-taro'],
     postcss: {
       autoprefixer: {
